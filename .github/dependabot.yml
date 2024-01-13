@@ -1,0 +1,28 @@
+version: 2
+updates:
+  - package-ecosystem: "gradle"
+    directory: "/demo1/"
+    schedule:
+      interval: "daily"
+      time: "07:00"
+    open-pull-requests-limit: 100
+    allow:
+      depedency-name: "jackson-module-kotlin"
+    labels:
+      - "dependencies"
+      - "gradle"
+      - "kotlin"
+      - "automatic-merge"
+
+  - package-ecosystem: "gradle"
+    directory: "/demo1/"
+    schedule:
+      interval: "daily"
+      time: "08:00"
+    open-pull-requests-limit: 100
+    ignore:
+      dependency-name: "jackson-module-kotlin"
+    labels:
+      - "dependencies"
+      - "gradle"
+      - "kotlin"
